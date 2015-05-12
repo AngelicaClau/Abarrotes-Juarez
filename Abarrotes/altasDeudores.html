@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="altasDeudores.php">
+  <table width="809" height="218" border="1">
+    <tr>
+     
+      <td width="144"><div align="center">Nombre </div></td>
+      <td width="144"><div align="center">Domicilio</div></td>
+      <td width="144"><div align="center">Deuda</div></td>
+	  <td width="144"><div align="center">Abono</div></td>
+	  <td width="199"><div align="center">total</div></td>
+    </tr>
+    <tr>
+      <td><label>
+          <div align="center">
+            <input name="nombre" type="text" id="nombre" />
+          </div>
+        </label></td>
+      <td><label>
+          <div align="center">
+            <input type="text" name="domicilio" id="domicilio" />
+          </div>
+        </label></td>
+      <td><label>
+          <div align="center">
+            <input type="text" name="deuda" id="deuda" />
+          </div>
+        </label></td>
+		 <td><label>
+           <input type="text" name="abono" id="abono" />
+           <div align="center"></div>
+        </label></td>
+		 <td><label>
+           <input type="text" name="total" id="total" />
+           <div align="center"></div>
+        </label></td>
+    </tr>
+    <tr>
+      <td colspan="5"><label>
+        <div align="center">
+            <input type="submit" name="Submit" value="Enviar" />
+            <input type="reset" name="Submit2" value="Limpiar" />
+            <input type="button" name="Submit22" value="Calcular" onclick="calcularDeuda()" />
+          </div>
+        </label></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</form>
+<script type="text/javascript">
+
+	function calcularDeuda(){
+		var deuda=document.getElementById('deuda').value;
+		var abono=document.getElementById('abono').value;
+		document.form1.total.value=deuda-abono;
+	}			
+</script>
+</body>
+</html>
